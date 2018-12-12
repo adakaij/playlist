@@ -1,5 +1,6 @@
 h1 {
     text-align: center;
+    font-family: 'Raleway', sans-serif;
 }
 
 #cart {
@@ -20,18 +21,29 @@ h1 {
     width: auto;
     margin: 20px;
 }
+#images{
+    background-color:#F8F3D3;
+}
 
 #songs p {
     font-size: 18px;
     height: 100px;
     font-weight: bold;
     margin: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+#songs{
+    background-color:#80AF9C;
 }
 
 #artists p {
     font-size: 18px;
     height: 100px;
     margin: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+#artists{
+    background-color:#E86618;
 }
 
 #lengths p {
@@ -39,6 +51,10 @@ h1 {
     height: 100px;
     margin: 20px;
     text-align: right;
+    font-family: 'Raleway', sans-serif;
+}
+#lengths{
+    background-color:#315160;
 }
 
 #links a {
@@ -47,6 +63,10 @@ h1 {
     height: 100px;
     font-weight: bold;
     margin: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+#links{
+    background-color:#203B45;
 }
 
 #form {
@@ -63,4 +83,7 @@ input {
 button {
     font-size: 14px;
     padding: 5px 10px;
+}
+body{
+    font-family: 'Raleway', sans-serif;
 }

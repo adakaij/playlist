@@ -48,6 +48,7 @@ h1 {
 
 #lengths p {
     font-size: 16px;
+    color:white;
     height: 100px;
     margin: 20px;
     text-align: right;
@@ -60,6 +61,7 @@ h1 {
 #links a {
     display: block;
     font-size: 18px;
+    color:white;
     height: 100px;
     font-weight: bold;
     margin: 20px;

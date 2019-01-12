@@ -49,6 +49,9 @@ function displaySongInfo(){
     song_links.forEach(function(link){
         $("#links").append(`<a href = ${link}>listen now</a>`);
     });
+    for(var i = 0; i < songs.length; i++){
+        
+    }
 }
 
 function emptySongInfo(){
@@ -76,7 +79,16 @@ function addSongInfo(){
 
 }
 function deleteSong(){
-    
+    var songName = $("#song").val();
+    songs.splice(songs.indexOf(songName), 1);
+    var imageLink = $("#image").val();
+    image_links.splice(songs.indexOf(imageLink), 1);
+    var artistName = $("#artist").val();
+    artists.splice(artists.indexOf(artistName), 1);
+    var songLength = $("#length").val();
+    song_lengths.splice(song_lengths(songLength), 1);
+    var songLink = $("#link").val();
+    song_links.splice(song_links.indexOf(songLink), 1);
 }
 
 $("#add").click(function() {
@@ -86,5 +98,6 @@ $("#add").click(function() {
 });
 $("#delete").click(function() {
     deleteSong();
+    displaySongInfo();
 });
 displaySongInfo();

@@ -70,7 +70,9 @@ h1 {
 #links{
     background-color:#203B45;
 }
-
+#delete{
+    background-color:#2C2C2B;
+}
 #form {
     width: 75%;
     margin: 0 auto 20px auto;
@@ -88,4 +90,11 @@ button {
 }
 body{
     font-family: 'Raleway', sans-serif;
+}
+#delete{
+    text-align: center;
+    
+}
+#delete button{
+    margin:30px;
 }

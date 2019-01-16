@@ -30,7 +30,7 @@ var song_links = [
     "https://www.youtube.com/watch?v=ZKff6nOQMA0",
     "https://www.youtube.com/watch?v=X1-15vpUF8s"
     ];
-
+    
 
 function displaySongInfo(){
     songs.forEach(function(song) {
@@ -49,9 +49,6 @@ function displaySongInfo(){
     song_links.forEach(function(link){
         $("#links").append(`<a href = ${link}>listen now</a>`);
     });
-    for(var i = 0; i < songs.length; i++){
-        
-    }
 }
 
 function emptySongInfo(){
@@ -61,8 +58,25 @@ function emptySongInfo(){
     $("#lengths").empty();
     $("#images").empty();
     $("#links").empty();
+    $("#delete").empty();
 }
 
+function displayDelete(){
+    for(let i = 0; i <= songs.length; i++){
+        var deleteButton = $("<button>" + "Delete" + "</button>");
+        $("#delete").append(deleteButton);
+        deleteButton.click(function(){
+            emptySongInfo();
+            songs.splice(i, 1);
+            image_links.splice(i, 1);
+            artists.splice(i, 1);
+            song_lengths.splice(i, 1);
+            song_links.splice(i, 1);
+            displaySongInfo();
+            displayDelete();
+        });
+    }
+}
 
 function addSongInfo(){
     var songName = $("#song").val();
@@ -78,26 +92,12 @@ function addSongInfo(){
     song_links.push(songLink);
 
 }
-function deleteSong(){
-    var songName = $("#song").val();
-    songs.splice(songs.indexOf(songName), 1);
-    var imageLink = $("#image").val();
-    image_links.splice(songs.indexOf(imageLink), 1);
-    var artistName = $("#artist").val();
-    artists.splice(artists.indexOf(artistName), 1);
-    var songLength = $("#length").val();
-    song_lengths.splice(song_lengths(songLength), 1);
-    var songLink = $("#link").val();
-    song_links.splice(song_links.indexOf(songLink), 1);
-}
+
 
 $("#add").click(function() {
     emptySongInfo();
     addSongInfo();
     displaySongInfo();
 });
-$("#delete").click(function() {
-    deleteSong();
-    displaySongInfo();
-});
 displaySongInfo();
+displayDelete();

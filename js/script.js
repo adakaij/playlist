@@ -98,6 +98,7 @@ $("#add").click(function() {
     emptySongInfo();
     addSongInfo();
     displaySongInfo();
+    displayDelete();
 });
 displaySongInfo();
 displayDelete();

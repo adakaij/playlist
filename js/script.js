@@ -62,7 +62,7 @@ function emptySongInfo(){
 }
 
 function displayDelete(){
-    for(let i = 0; i <= songs.length; i++){
+    for(let i = 0; i < songs.length; i++){
         var deleteButton = $("<button>" + "Delete" + "</button>");
         $("#delete").append(deleteButton);
         deleteButton.click(function(){

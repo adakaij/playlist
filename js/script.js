@@ -90,7 +90,7 @@ function addSongInfo(){
     song_lengths.push(songLength);
     var songLink = $("#link").val();
     song_links.push(songLink);
-
+    songs.length++;
 }
 
 
